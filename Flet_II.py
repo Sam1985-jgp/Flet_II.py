@@ -1,4 +1,11 @@
-import flet as ft
+# -*- coding: utf-8 -*-
+import sys
+import os
+
+# Evitar criação de arquivos .pyc
+sys.dont_write_bytecode = True
+
+import Flet as ft
 
 def main(page: ft.Page):
     page.title = "Formulário de Contato"
@@ -44,4 +51,6 @@ def main(page: ft.Page):
         )
     )
 
-ft.app(target=main)
+# Rodar app sem criar pycache
+if __name__ == "__main__":
+    ft.app(target=main)
